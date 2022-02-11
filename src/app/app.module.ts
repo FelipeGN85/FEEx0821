@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { GeneratorComponent } from './generator/generator.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CellComponent } from './cell/cell.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GeneratorComponent,
-    PaymentsComponent
+    PaymentsComponent,
+    CellComponent
   ],
   imports: [
     BrowserModule,
