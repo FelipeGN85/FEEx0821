@@ -11,12 +11,9 @@
         </svg>
         <button type="button" class="btn btn-secondary" (click)="buildGrid()">GENERATE 2D Grid</button>
     </div>
-    <div class="container">
-        <table class="table-size">
-            <tr *ngFor="let row of rows">
-                <td *ngFor="let row of rows">{{row}}</td>
-            </tr>
-        </table>
+    <div class="wrapper">
+        <cell *ngFor="let val of cells; let i = index" [character]="val">
+        </cell>
     </div>
 
 </div>

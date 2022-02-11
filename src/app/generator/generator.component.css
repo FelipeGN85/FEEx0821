@@ -8,13 +8,10 @@
     display: grid;
 }
 
-table,
-th,
-td {
-    border: 1px solid black;
-    text-align: center;
-}
-
-.table-size {
-    width: 100%;
+.wrapper {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 600px;
+    margin-left: 680px;
 }
