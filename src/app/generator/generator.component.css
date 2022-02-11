@@ -1,0 +1,20 @@
+.container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-container {
+    display: grid;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.table-size {
+    width: 100%;
+}

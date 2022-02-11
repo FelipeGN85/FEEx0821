@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./generator.component.css']
 })
 export class GeneratorComponent implements OnInit {
-
+ rows=["a","a","a","a","a","a","a","a","a","a"];
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
