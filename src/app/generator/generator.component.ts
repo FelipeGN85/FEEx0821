@@ -6,11 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./generator.component.css']
 })
 export class GeneratorComponent implements OnInit {
- rows=["a","a","a","a","a","a","a","a","a","a"];
+  character: string = "";
+  possibleCharacters: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+  rows: string[] = [''];
   constructor() { }
 
   ngOnInit(): void {
+    this.buildGrid();
+  }
 
+  buildGrid(){
+    this.character = this.possibleCharacters.charAt(Math.floor(Math.random() * this.possibleCharacters.length));
+    this.rows = Array(10).fill(this.character);
   }
 
 }
