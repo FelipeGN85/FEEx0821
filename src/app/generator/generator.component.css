@@ -2,6 +2,7 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    width: 630px;
 }
 
 .input-container {
@@ -13,10 +14,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     width: 600px;
-    margin-left: 680px;
+    margin-left: 660px;
 }
 
 .container-code {
     margin-top: 20px;
     margin-left: 924px;
+}
+
+#generateButton {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 32px;
 }
