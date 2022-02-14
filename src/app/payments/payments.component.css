@@ -1,0 +1,21 @@
+.container-live {
+    margin-top: 20px;
+    margin-left: 924px;
+}
+
+.container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.input-container {
+    display: grid;
+}
+
+#addButton {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 24px;
+}
