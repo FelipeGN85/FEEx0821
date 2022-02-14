@@ -18,13 +18,15 @@ export class GeneratorComponent implements OnInit {
 
   buildGrid() {
     this.cells = Array.from({ length: 100 }, () => this.randomCharacter());
+    this.cells[87] = 'a';
+    this.cells[1] = 'b';
     this.date = new Date();
     // console.log(this.date);
     // console.log('1st coords character: ', this.cells[this.date.getSeconds()]);
     // console.log('2st coords character: ', this.cells[this.reverseNum(this.date.getSeconds())]);
     this.code = this.caractherOccurrences(this.cells[this.date.getSeconds()]).toString() + this.caractherOccurrences(this.cells[this.reverseNum(this.date.getSeconds())]).toString();
-    //if count>9 divide by 2
-    // console.log(this.code);
+    localStorage.clear();
+    localStorage.setItem("grid", JSON.stringify(this.cells));
     localStorage.setItem("code", this.code);
   }
 
@@ -40,7 +42,13 @@ export class GeneratorComponent implements OnInit {
 
   caractherOccurrences(caracther: string): number {
     let numOfOccr = this.cells.filter(x => x === caracther).length;
-    if (numOfOccr > 9) Math.ceil(numOfOccr/2); 
+    if (numOfOccr > 9) Math.ceil(numOfOccr/2);
+    // while (numOfOccr > 9) {
+    //   Math.ceil(numOfOccr/2);
+    //   if(numOfOccr <= 9){
+    //     break;
+    //   }
+    // }
     return numOfOccr;
   }
 
