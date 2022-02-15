@@ -2,13 +2,35 @@
     <p><strong>YOUR CODE NOW: </strong>{{code}}</p>
 </div>
 <div class="container">
-    <div class="input-container">
-        <label for="characterInput">PAYMENT</label>
-        <input type="text" id="paymentInput" placeholder="Payment">
-    </div>
-    <div class="input-container">
-        <label for="characterInput">AMMOUNT</label>
-        <input type="text" id="ammountInput" placeholder="Ammount">
-    </div>
-    <button id="addButton" type="button" class="btn btn-secondary">+ ADD</button>
+    <form [formGroup]="paymentForm" class="container">
+        <div class="input-container">
+            <label for="characterInput">PAYMENT</label>
+            <input type="text" formControlName="name" placeholder="Payment">
+        </div>
+        <div class="input-container">
+            <label for="characterInput">AMMOUNT</label>
+            <input type="text" formControlName="ammount" placeholder="Ammount">
+        </div>
+        <button id="addButton" type="button" class="btn btn-secondary" (click)="addPayment()">+ ADD</button>
+    </form>
+</div>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Ammount</th>
+                <th scope="col">Code</th>
+                <th scope="col">Grid</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let payment of paymentsList">
+                <td>{{payment.name}}</td>
+                <td>{{payment.ammount}}</td>
+                <td>{{payment.code}}</td>
+                <td>{{payment.grid.length}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
