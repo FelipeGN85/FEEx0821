@@ -10,9 +10,9 @@ export class GeneratorComponent implements OnInit {
   cells!: any[];
   date!: Date;
   code!: string;
-  caracterForm: FormGroup;
+  characterForm: FormGroup;
   constructor(private fb: FormBuilder) { 
-    this.caracterForm = this.fb.group({
+    this.characterForm = this.fb.group({
       letter:[''],
     });
   }
@@ -27,11 +27,11 @@ export class GeneratorComponent implements OnInit {
     this.cells[87] = 'a';
     this.cells[1] = 'b';
     
-    if(this.caracterForm.value.letter != '') {
+    if(this.characterForm.value.letter != '') {
       for (let i=2; i < 22; i++) {
-        this.cells[i] = this.caracterForm.value.letter;
+        this.cells[i] = this.characterForm.value.letter;
       }
-      this.caracterForm.setValue({letter: ''});
+      this.characterForm.setValue({letter: ''});
     }
   
     this.date = new Date();
