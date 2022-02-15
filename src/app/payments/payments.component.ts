@@ -14,10 +14,10 @@ export class PaymentsComponent implements OnInit {
   
   constructor(private fb: FormBuilder) {
     this.paymentForm = this.fb.group({
-      name:[''],
-      ammount:[''],
-      code: ['',Validators.required],
-      grid: ['',Validators.required]
+      name:['', Validators.required],
+      ammount:['', Validators.required],
+      code: ['', Validators.required],
+      grid: ['', Validators.required]
     });
    }
 
