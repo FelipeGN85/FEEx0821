@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { GeneratorComponent } from './generator.component';
 
 describe('GeneratorComponent', () => {
@@ -8,6 +8,7 @@ describe('GeneratorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [ReactiveFormsModule],
       declarations: [ GeneratorComponent ]
     })
     .compileComponents();

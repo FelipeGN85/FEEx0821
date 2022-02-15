@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'generator',
@@ -9,7 +10,12 @@ export class GeneratorComponent implements OnInit {
   cells!: any[];
   date!: Date;
   code!: string;
-  constructor() { }
+  caracterForm: FormGroup;
+  constructor(private fb: FormBuilder) { 
+    this.caracterForm = this.fb.group({
+      letter:[''],
+    });
+  }
 
   ngOnInit(): void {
     setInterval(() => { this.buildGrid() }, 2 * 1000);
@@ -20,6 +26,14 @@ export class GeneratorComponent implements OnInit {
     this.cells = Array.from({ length: 100 }, () => this.randomCharacter());
     this.cells[87] = 'a';
     this.cells[1] = 'b';
+    
+    if(this.caracterForm.value.letter != '') {
+      for (let i=2; i < 22; i++) {
+        this.cells[i] = this.caracterForm.value.letter;
+      }
+      this.caracterForm.setValue({letter: ''});
+    }
+  
     this.date = new Date();
     // console.log(this.date);
     // console.log('1st coords character: ', this.cells[this.date.getSeconds()]);
