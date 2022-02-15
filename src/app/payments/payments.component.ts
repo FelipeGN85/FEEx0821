@@ -34,7 +34,6 @@ export class PaymentsComponent implements OnInit {
     this.paymentForm.patchValue({code: localStorage.getItem('code')?.toString()});
     this.paymentForm.patchValue({grid: localStorage.getItem('grid')?.split(',')});
     this.paymentsList.push(this.paymentForm.value);
-    console.log(this.paymentsList);
     this.paymentForm.reset();
   }
 
