@@ -27,9 +27,14 @@ export class PaymentsComponent implements OnInit {
   ngOnInit(): void {
     setInterval(() => { this.getGridCode()  }, 1 * 1000);
   }
-
+  
   getGridCode() {
+    this.checkForPaymentList();
     this.code = localStorage.getItem('code')?.toString() || '';
+  }
+  
+  checkForPaymentList() {
+    this.paymentsList = JSON.parse(sessionStorage.getItem('payments') || '');
   }
 
   addPayment() {
@@ -37,10 +42,12 @@ export class PaymentsComponent implements OnInit {
     this.paymentForm.patchValue({grid: localStorage.getItem('grid')?.split(',')});
     this.paymentsList.push(this.paymentForm.value);
     this.paymentForm.reset();
+    sessionStorage.setItem('payments', JSON.stringify(this.paymentsList));
   }
 
   goToGenerator() {
     this.router.navigate(['generator']);
+    sessionStorage.setItem('payments', JSON.stringify(this.paymentsList));
   }
 
 }
