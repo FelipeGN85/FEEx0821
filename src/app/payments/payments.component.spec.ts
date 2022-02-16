@@ -23,4 +23,15 @@ describe('PaymentsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have labels', () => {
+    expect(component).withContext('YOUR CODE NOW:').toBeTruthy();
+    expect(component).withContext('PAYMENT').toBeTruthy();
+    expect(component).withContext('AMMOUNT').toBeTruthy();
+    expect(component).withContext('+ ADD').toBeTruthy();
+    expect(component).withContext('Name').toBeTruthy();
+    expect(component).withContext('Ammount').toBeTruthy();
+    expect(component).withContext('Code').toBeTruthy();
+    expect(component).withContext('Grid').toBeTruthy();
+  });
 });

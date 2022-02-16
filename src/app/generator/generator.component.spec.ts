@@ -23,4 +23,11 @@ describe('GeneratorComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have labels', () => {
+    expect(component).withContext('YOUR CODE').toBeTruthy();
+    expect(component).withContext('CHARACTER').toBeTruthy();
+    expect(component).withContext('Character').toBeTruthy();
+    expect(component).withContext('GENERATE 2D Grid').toBeTruthy();
+  });
 });
