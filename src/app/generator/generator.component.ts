@@ -21,7 +21,7 @@ export class GeneratorComponent implements OnInit {
 
   ngOnInit(): void {
     setInterval(() => { this.buildGrid() }, 2 * 1000);
-    // this.buildGrid();test
+    // this.buildGrid();
   }
 
   buildGrid() {
