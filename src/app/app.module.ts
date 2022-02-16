@@ -7,7 +7,7 @@ import { GeneratorComponent } from './generator/generator.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CellComponent } from './cell/cell.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
