@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { GeneratorComponent } from './generator.component';
 
 describe('GeneratorComponent', () => {
@@ -8,8 +9,9 @@ describe('GeneratorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule],
-      declarations: [ GeneratorComponent ]
+      imports: [ ReactiveFormsModule ],
+      declarations: [ GeneratorComponent ],
+      providers: [ { provide: Router, useValue: '' }]
     })
     .compileComponents();
   });
