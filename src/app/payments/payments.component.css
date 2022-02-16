@@ -7,17 +7,17 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    width: 600px;
+    width: 700px;
 }
 
 .input-container {
     display: grid;
 }
 
-#addButton {
+.button {
     width: fit-content;
     height: fit-content;
-    margin-top: 24px;
+    margin-top: 32px;
 }
 
 ul li::before {

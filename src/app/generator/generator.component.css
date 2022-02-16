@@ -14,6 +14,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     width: 600px;
+    height: 600px;
     margin-left: 660px;
 }
 
@@ -22,7 +23,7 @@
     margin-left: 924px;
 }
 
-#generateButton {
+.button {
     width: fit-content;
     height: fit-content;
     margin-top: 32px;

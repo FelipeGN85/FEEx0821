@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'generator',
@@ -11,7 +12,8 @@ export class GeneratorComponent implements OnInit {
   date!: Date;
   code!: string;
   characterForm: FormGroup;
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder,
+              private router: Router) { 
     this.characterForm = this.fb.group({
       letter:[''],
     });
@@ -63,6 +65,10 @@ export class GeneratorComponent implements OnInit {
       }
     }
     return numOfOccr;
+  }
+
+  goToPayments() {
+    this.router.navigate((['payments']));
   }
 
 }
