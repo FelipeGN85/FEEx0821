@@ -56,13 +56,12 @@ export class GeneratorComponent implements OnInit {
 
   caractherOccurrences(caracther: string): number {
     let numOfOccr = this.cells.filter(x => x === caracther).length;
-    if (numOfOccr > 9) Math.ceil(numOfOccr/2);
-    // while (numOfOccr > 9) {
-    //   Math.ceil(numOfOccr/2);
-    //   if(numOfOccr <= 9){
-    //     break;
-    //   }
-    // }
+    while (numOfOccr > 9) {
+      numOfOccr = Math.ceil(numOfOccr/2);
+      if(numOfOccr <= 9){
+        break;
+      }
+    }
     return numOfOccr;
   }
 
