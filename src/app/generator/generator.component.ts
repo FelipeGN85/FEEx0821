@@ -33,12 +33,12 @@ export class GeneratorComponent implements OnInit {
       }
       this.characterForm.setValue({letter: ''});
     }
-  
+
     this.date = new Date();
-    // console.log(this.date);
-    // console.log('1st coords character: ', this.cells[this.date.getSeconds()]);
-    // console.log('2st coords character: ', this.cells[this.reverseNum(this.date.getSeconds())]);
-    this.code = this.caractherOccurrences(this.cells[this.date.getSeconds()]).toString() + this.caractherOccurrences(this.cells[this.reverseNum(this.date.getSeconds())]).toString();
+
+    this.code = this.caractherOccurrences(this.cells[this.date.getSeconds()]).toString() +
+     this.caractherOccurrences(this.cells[this.reverseNum(this.date.getSeconds())]).toString();
+    
     localStorage.clear();
     localStorage.setItem("grid", JSON.stringify(this.cells));
     localStorage.setItem("code", this.code);
