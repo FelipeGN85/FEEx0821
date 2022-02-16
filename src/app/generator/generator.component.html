@@ -1,0 +1,28 @@
+<div>
+    <div class="container">
+        <form [formGroup]="characterForm" class="container">
+            <div class="input-container">
+                <label for="characterInput">CHARACTER</label>
+                <input type="text" id="characterInput" formControlName="letter" placeholder="Character">
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+            </svg>
+            <button id="generateButton" type="button" class="btn btn-secondary button" (click)="buildGrid()">GENERATE 2D
+                Grid</button>
+        </form>
+    </div>
+    <div class="wrapper">
+        <cell *ngFor="let val of cells; let i = index" [character]="val">
+        </cell>
+    </div>
+    <div class="container-code">
+        <ul style="margin-left: 8px;">
+            <li>LIVE</li>
+        </ul>
+        <p><strong>YOUR CODE: </strong>{{code}}</p>
+        <button type="button" class="btn btn-secondary button" (click)="goToPayments()" style="margin-top: 1px;margin-left: -7px;">GO PAYMENTS</button>
+    </div>
+</div>

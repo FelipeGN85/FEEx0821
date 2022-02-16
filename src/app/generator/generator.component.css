@@ -1,0 +1,39 @@
+.container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 630px;
+}
+
+.input-container {
+    display: grid;
+}
+
+.wrapper {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 600px;
+    height: 600px;
+    margin-left: 660px;
+}
+
+.container-code {
+    margin-top: 20px;
+    margin-left: 924px;
+}
+
+.button {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 32px;
+}
+
+ul li::before {
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    display: inline-block;
+    width: 0.7em;
+    margin-left: -1.145em;
+}
