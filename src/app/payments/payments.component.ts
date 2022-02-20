@@ -34,7 +34,7 @@ export class PaymentsComponent implements OnInit {
   }
 
   checkForPaymentList() {
-    this.paymentsList = JSON.parse(sessionStorage.getItem('payments') || '');
+    this.paymentsList = JSON.parse(sessionStorage.getItem('payments') || '[]');
   }
 
   addPayment() {

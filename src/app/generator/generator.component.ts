@@ -21,12 +21,12 @@ export class GeneratorComponent implements OnInit {
 
   ngOnInit(): void {
     setInterval(() => { this.buildGrid() }, 2 * 1000);
-    // this.buildGrid();test ci
+    // this.buildGrid();
   }
 
   buildGrid() {
     this.cells = Array.from({ length: 100 }, () => this.randomCharacter());
-    this.cells[87] = 'a';
+    this.cells[87] = 'c';
     this.cells[1] = 'b';
 
     if (this.characterForm.value.letter != '') {
